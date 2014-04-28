@@ -21,11 +21,24 @@
 
 
 
-<body>
-    <h1>Hello </h1>
-    <p>I'm hosted with GitHub Pages.</p>
-</body>
+   ---
+　　layout: default
+　　title: 我的Blog
+　　---
 
-<hr width="90%" color="red" /> 
+　　<h2>{{ page.title }}</h2>
+
+　　<p>最新文章</p>
+
+　　<ul>
+
+　　　　{% for post in site.posts %}
+
+　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+
+　　　　{% endfor %}
+
+　　</ul>
+
 
 </html>
