@@ -11,8 +11,13 @@
 
 
     <style type = "test/css">
-        div#blackcontainer{background-color:#ffff99;width:150px;height:200px;float:left}
-        td{padding-left:10cm}
+        div#container{
+        margin: 0px auto;
+        padding: 0px;
+        border: 0px none;
+        width:1129px;
+        text-align: left;
+        }
 
         
     </style>
@@ -36,25 +41,14 @@
 
 <body>
     
-    <div id = "blackcontainer">
-    <p>
-        test
-    </p>
-    </div>
+    
     <div id = "container">
         <div id = "container-inner">
         {{ content }}
-            <div id = "footer">
-                <div id = "footer-inner">
-                    <div id = "footer-content">
-                        <p>
-                            
-                        </p>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
+    
     
 </body>
 
