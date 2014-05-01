@@ -15,3 +15,34 @@ body{
     *font-size: small;
     text-align: center;
 }
+
+h1,h2,h3,h4,h5,h6{
+    font-size:100%
+}
+
+h1{
+    margin-bottom: 1em;
+}
+
+p{
+    margin: 1em 0;
+}
+
+a{
+    color: #00a;
+}
+
+/* 鼠标停在链接上链接的颜色 */
+a:hover{
+    color: black;
+}
+
+/* 访问后的链接颜色 */
+a:visited{
+    color: #a0a;
+}
+
+table{
+    font-size: inherit;
+    font:100%;
+}
