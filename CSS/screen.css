@@ -115,6 +115,7 @@ ul.posts span {
 }
 
 .site .footer {
+    text-align: center;
     font-size: 80%;
     color: #666;
     border-top: 4px solid #eee;
@@ -127,9 +128,7 @@ ul.posts span {
     margin-right: 3em;
 }
 
-.site .footer .contact p {
-    text-align: center;
-}
+
 
 .site .footer .contact a {
     color: #8085c1;
