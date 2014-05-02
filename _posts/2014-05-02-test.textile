@@ -5,7 +5,7 @@ title: 郑渊洁是个怎样的人
 
 <h1>{{ page.title }}</h1>
 
-<p><font color = "#aaa">{{ page.date | date_to_string }}</font></p>
+<p class="meta">{{ page.date | date_to_string }}</p>
 
 (本文用来测试文章的排版)
 
