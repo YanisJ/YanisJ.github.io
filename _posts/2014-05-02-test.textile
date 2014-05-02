@@ -3,9 +3,9 @@ layout: default
 title: 郑渊洁是个怎样的人
 ---
 
-<h2>{{ page.title }}</h2>
+<h2 font-weight = "bold">{{ page.title }}</h2>
 
-{{ page.date | date_to_string }}
+<p color = #aaa>{{ page.date | date_to_string }}</p>
 
 (本文用来测试文章的排版)
 
