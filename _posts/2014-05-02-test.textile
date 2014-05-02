@@ -3,7 +3,7 @@ layout: default
 title: 郑渊洁是个怎样的人
 ---
 
-{{ page.title }}
+<h2>{{ page.title }}</h2>
 
 {{ page.date | date_to_string }}
 
