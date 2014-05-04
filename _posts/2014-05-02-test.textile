@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 郑渊洁是个怎样的人
 ---
 
