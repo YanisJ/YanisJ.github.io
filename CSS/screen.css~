@@ -164,7 +164,7 @@ ul.posts span {
     color:#a00;
 }
 
-.site .header .ul
+
 
 /*===============================*/
 
@@ -173,9 +173,7 @@ ul.posts span {
 /*===============================*/
 
 #post{
-    border-top: 2px solid #eee;
-    padding-top: 40px;
-    margin-top: 8px;
+    
 }
 
 /* standard */
