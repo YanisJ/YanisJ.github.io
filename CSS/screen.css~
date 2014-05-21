@@ -55,10 +55,13 @@ table{
 /* 对表格类的各种设定 */
 
 /**************************************************/
+#home{
+    border-top: 4px solid #eee;
+    padding-top: 30px;
+    margin-top: 50px;
+}
 
 ul.posts {
-    border-top: 4px solid #eee;
-    padding-top: 50px;
     list-style-type: none;
     margin-bottom: 2em;
 }
@@ -147,6 +150,9 @@ ul.posts span {
     border: 0;
 }
 
+.site .header .h3 {
+    font-weight: bold;
+}
 
 /*===============================*/
 
@@ -156,7 +162,8 @@ ul.posts span {
 
 #post{
     border-top: 4px solid #eee;
-    padding-top: 50px;
+    padding-top: 30px;
+    margin-top: 50px;
 }
 
 /* standard */
