@@ -56,9 +56,9 @@ table{
 
 /**************************************************/
 #home{
-    border-top: 4px solid #eee;
-    padding-top: 30px;
-    margin-top: 50px;
+    border-top: 2px solid #eee;
+    padding-top: 40px;
+    margin-top: 8px;
 }
 
 ul.posts {
@@ -157,9 +157,14 @@ ul.posts span {
 .text-muted {
 
 }
+
+
 .site .header .text-muted {
     font-weight: bold;
+    color:#a00;
 }
+
+.site .header .ul
 
 /*===============================*/
 
@@ -168,9 +173,9 @@ ul.posts span {
 /*===============================*/
 
 #post{
-    border-top: 4px solid #eee;
-    padding-top: 30px;
-    margin-top: 50px;
+    border-top: 2px solid #eee;
+    padding-top: 40px;
+    margin-top: 8px;
 }
 
 /* standard */
