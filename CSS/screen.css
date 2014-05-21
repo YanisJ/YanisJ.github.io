@@ -150,7 +150,14 @@ ul.posts span {
     border: 0;
 }
 
-.site .header .h3 {
+.header {
+
+}
+
+.text-muted {
+
+}
+.site .header .text-muted {
     font-weight: bold;
 }
 
