@@ -238,6 +238,10 @@ ul.posts span {
     width: 647px;
     height: 300px;
     overflow: hidden;
+
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
 }
 
 .accordian ul {
@@ -251,6 +255,12 @@ ul.posts span {
     width: 129px;
     float: left;
     list-style-type: none;
+
+    border-left: 1px solid #888;
+
+    box-shadow: 0 0 25px 15px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 25px 15px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 25px 15px rgba(0, 0, 0, 0.5);
 
     transition: width 1s;
     -webkit-transition: width 1s;
