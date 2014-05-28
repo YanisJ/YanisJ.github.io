@@ -251,9 +251,21 @@ ul.posts span {
     width: 129px;
     float: left;
     list-style-type: none;
+
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
 }
 
-.accordian .acc img {
+.accordian ul:hover li {
+    width: 30px;
+}
+
+.accordian li:hover {
+    width: 527px;
+}
+
+.accordian img {
     display: block;
     width: 527px;
     height: 300px;
@@ -273,4 +285,3 @@ ul.posts span {
     font-size: 16px;
     padding: 20px;
 }
-
