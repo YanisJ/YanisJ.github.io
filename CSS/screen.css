@@ -241,6 +241,7 @@ ul.posts span {
 }
 
 .accordian ul {
+    width: 1200;
     margin: 0;
     padding: 0;
 }
