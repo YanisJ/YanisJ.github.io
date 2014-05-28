@@ -232,6 +232,11 @@ ul.posts span {
     padding: 0;
 }
 
+.accordian ul {
+    margin: 0;
+    padding: 0;
+}
+
 .accordian .acc {
     position: relative;
     width: 129;
