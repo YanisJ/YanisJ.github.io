@@ -245,10 +245,11 @@ ul.posts span {
     padding: 0;
 }
 
-.accordian .acc {
+.accordian li {
     position: relative;
     width: 129px;
     float: left;
+    list-style-type: none;
 }
 
 .accordian .acc img {
