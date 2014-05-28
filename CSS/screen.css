@@ -229,8 +229,6 @@ ul.posts span {
 .coa {
     margin: 0;
     padding: 0;
-    line-height: 0;
-    display: block;
 }
 
 .accordian {
@@ -248,7 +246,7 @@ ul.posts span {
 
 .accordian .acc {
     position: relative;
-    height: 60;
+    width: 129;
     float: left;
 }
 
@@ -260,8 +258,7 @@ ul.posts span {
 .accordian .image_title {
     background: rgba(0,0,0,0.5);
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 0; bottom: 0;
     width: 527px;
 }
 
