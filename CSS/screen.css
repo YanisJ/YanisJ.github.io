@@ -232,13 +232,13 @@ ul.posts span {
     padding: 0;
 }
 
-.accordian li {
+.accordian .acc {
     position: relative;
     width: 129;
     float: left;
 }
 
-.accordian img {
+.accordian .acc img {
     display: block;
 }
 
