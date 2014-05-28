@@ -235,6 +235,8 @@ ul.posts span {
 .accordian {
     margin: 0;
     padding: 0;
+    width: 647;
+    height: 300;
 }
 
 .accordian ul {
