@@ -226,6 +226,11 @@ ul.posts span {
 /* Accordian */
 
 /*===============================*/
+.acc {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
 
 .accordian {
     margin: 0;
