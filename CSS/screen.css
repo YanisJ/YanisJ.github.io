@@ -234,6 +234,8 @@ ul.posts span {
 
 .accordian li {
     position: relative;
+    width: 129;
+    float: left;
 }
 
 .accordian img {
@@ -246,6 +248,7 @@ ul.posts span {
     position: absolute;
     left: 0;
     bottom: 0;
+    width: 527px;
 }
 
 .accordian .image_title a{
