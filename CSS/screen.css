@@ -283,7 +283,7 @@ ul.posts span {
 
 /* imagetitle */
 .accordian .image_title {
-    background: rgba(0,0,0,0.5);
+    background: rgba(226, 11, 11, 0.5);
     position: absolute;
     left: 0; bottom: 0;
     width: 527px;
@@ -294,4 +294,5 @@ ul.posts span {
     display: block;
     font-size: 16px;
     padding: 20px;
+    text-decoration: none;
 }
