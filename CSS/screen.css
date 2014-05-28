@@ -218,3 +218,39 @@ ul.posts span {
 #related h2{
     margin-bottom: 1em;
 }
+
+
+
+/*===============================*/
+
+/* Accordian */
+
+/*===============================*/
+
+.accordian {
+    margin: 0;
+    padding: 0;
+}
+
+.accordian li {
+    position: relative;
+}
+
+.accordian img {
+    display: block;
+}
+
+/* imagetitle */
+.accordian .image_title {
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.accordian .image_title a{
+    color: white;
+    display: block;
+    font-size: 16px;
+    padding: 20px;
+}
