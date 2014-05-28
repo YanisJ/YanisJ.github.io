@@ -226,10 +226,11 @@ ul.posts span {
 /* Accordian */
 
 /*===============================*/
-.acc {
+.coa {
     margin: 0;
     padding: 0;
     line-height: 0;
+    display: block;
 }
 
 .accordian {
@@ -246,7 +247,7 @@ ul.posts span {
 
 .accordian .acc {
     position: relative;
-    width: 129;
+    height: 60;
     float: left;
 }
 
@@ -259,7 +260,7 @@ ul.posts span {
     background: rgba(0,0,0,0.5);
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     width: 527px;
 }
 
