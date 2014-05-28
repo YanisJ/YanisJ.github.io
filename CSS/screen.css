@@ -226,17 +226,18 @@ ul.posts span {
 /* Accordian */
 
 /*===============================*/
-.coa {
+/*.coa {
     margin: 0;
     padding: 0;
     line-height: 0;
-}
+}*/
 
 .accordian {
     margin: 0;
     padding: 0;
     width: 647px;
     height: 300px;
+    overflow: hidden;
 }
 
 .accordian ul {
