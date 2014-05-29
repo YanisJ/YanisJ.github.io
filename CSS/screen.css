@@ -300,6 +300,8 @@ ul.posts span {
 #clouds {
     position: fixed; top: 0; left: 0;
     z-index: -1;
+
+    padding: 100px 0;
     background: #c9dbe9;
     background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
     background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
@@ -316,5 +318,25 @@ ul.posts span {
     -moz-border-radius: 200px;
 
     position: relative;
-    left: 700px
+}
+
+.cloud:before, .cloud:after {
+    content: "";
+    width: 100px; height: 80px;
+    background: #fff;
+
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+
+    position: absolute; top: -15px; left: 10px;
+
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+    width: 120px; height: 120px;
+    top: -45px; left: 45px;
 }
