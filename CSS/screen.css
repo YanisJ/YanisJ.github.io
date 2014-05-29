@@ -226,12 +226,6 @@ ul.posts span {
 /* Accordian */
 
 /*===============================*/
-/*.coa {
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-}*/
-
 .accordian {
     margin: 0;
     padding: 0;
@@ -295,4 +289,16 @@ ul.posts span {
     font-size: 16px;
     padding: 20px;
     text-decoration: none;
+}
+
+/*===============================*/
+
+/* Cloud */
+
+/*===============================*/
+
+#clouds {
+    width: 1400px;
+    height: 800px;
+    background: #000;
 }
