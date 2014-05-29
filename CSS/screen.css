@@ -407,16 +407,16 @@ ul.posts span {
 }
 
 @keyframes moveclouds {
-    0% {margin-left: 1600px}
+    0% {margin-left: 1700px}
     100% {margin-left: -650px}
 }
 
 @-webkit-keyframes moveclouds {
-    0% {margin-left: 1600px}
+    0% {margin-left: 1700px}
     100% {margin-left: -650px}
 }
 
 @-moz-keyframes moveclouds {
-    0% {margin-left: 1600px}
+    0% {margin-left: 1700px}
     100% {margin-left: -650px}
 }
