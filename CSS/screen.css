@@ -301,4 +301,6 @@ ul.posts span {
     width: 1400px;
     height: 800px;
     background: #000;
+    position: fixed;
+    z-index: -1;
 }
