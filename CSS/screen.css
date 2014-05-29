@@ -344,10 +344,66 @@ ul.posts span {
     top: -45px; left: 45px;
 }
 
-.cloud {
+.x1 {
     animation: moveclouds 15s linear infinite;
     -webkit-animation: moveclouds 15s linear infinite;
     -moz-animation: moveclouds 15s linear infinite;
+}
+
+.x2 {
+    top: 0px; left: 200px;
+    
+    transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+
+    opacity: 0.6;
+
+    animation: moveclouds 25s linear infinite;
+    -webkit-animation: moveclouds 25s linear infinite;
+    -moz-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+    top: -200px; left: -250px;
+    
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+
+    opacity: 0.8;
+
+    animation: moveclouds 18.75s linear infinite;
+    -webkit-animation: moveclouds 18.75s linear infinite;
+    -moz-animation: moveclouds 18.75s linear infinite;
+}
+
+.x4 {
+    top: -250px; left: 470px;
+    
+    transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+
+    opacity: 0.75;
+
+    animation: moveclouds 20s linear infinite;
+    -webkit-animation: moveclouds 20s linear infinite;
+    -moz-animation: moveclouds 20s linear infinite;
+}
+
+.x5 {
+    top: -150px; left: -150px;
+    
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+
+    opacity: 0.8;
+
+    animation: moveclouds 18.75s linear infinite;
+    -webkit-animation: moveclouds 18.75s linear infinite;
+    -moz-animation: moveclouds 18.75s linear infinite;
 }
 
 @keyframes moveclouds {
