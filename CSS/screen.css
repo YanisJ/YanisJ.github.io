@@ -298,9 +298,23 @@ ul.posts span {
 /*===============================*/
 
 #clouds {
-    width: 1400px;
-    height: 800px;
-    background: #000;
     position: fixed; top: 0; left: 0;
     z-index: -1;
+    background: #c9dbe9;
+    background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+    background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+    background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+    background: -o-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+
+.cloud {
+    width: 180px; height: 60px;
+    background: #fff;
+
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+
+    position: relative;
+    left: 700px
 }
