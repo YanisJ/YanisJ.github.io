@@ -1,0 +1,42 @@
+---
+layout: post
+title: Calculator
+---
+
+<h1>{{ page.title }}</h1>
+
+<p class="meta">{{ page.date | date_to_string }}</p>
+
+<div id="calpad">
+	<div id="calculator">
+		<!-- Screen and clear key -->
+		<div class="top">
+			<span class="clear">C</span>
+			<div class="screen"></div>
+		</div>
+		<!-- operators and keys -->
+		<div class="keys">
+			<span>7</span>
+			<span>8</span>
+			<span>9</span>
+			<span class="operator">+</span>
+			<span>4</span>
+			<span>5</span>
+			<span>6</span>
+			<span class="operator">-</span>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span class="operator">÷</span>
+			<span>0</span>
+			<span>.</span>
+			<span class="eval">=</span>
+			<span class="operator">x</span>
+		</div>
+		<!-- keys end -->
+	</div>
+</div>
+<!-- PrefixFree -->
+<script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript"></script>
+<!-- Calculor -->
+<script src="/js/calculator.js" type="text/javascript"></script>
