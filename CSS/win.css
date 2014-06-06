@@ -1,0 +1,343 @@
+.demo-wrapper {
+	padding: 2em .5em;
+	width: 100%;
+	height: 100%;
+	perspective: 3300px;
+	position: relative;
+}
+
+.dashboard {
+	margin: 0 auto;
+	width: 100%;
+	padding: 1em;
+	transform: translateX(200px);
+	-webkit-transform: translateX(200px);
+	opacity: 0;
+	animation: start 1s ease-out forwards;
+	-webkit-animation: start 1s ease-out forwards;
+}
+@keyframes start {
+	0% {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}	
+}
+@-webkit-keyframes start {
+	0% {
+		-webkit-transform: translateX(200px);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		opacity: 1;
+	}	
+}
+
+/*tiles' style*/
+.tile {
+	float: left;
+	margin: 0 auto 1%;
+	color: white;
+	font-size: 1.3em;
+	text-align: center;
+	height: 8em;
+	font-weight: 300;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+	background-color: #fff;
+	list-style-type: none;
+	transition: background-color 0.2s ease-out; 
+}
+
+.tile-2xbig {
+	height: 16.15em;
+	width: 100%;
+}
+
+.tile-big {
+	width: 100%;
+}
+
+.tile-small {
+	width: 49%;
+	margin-right: 2%;
+}
+
+.tile-small.last {
+	margin-right: 0;
+}
+
+.tile div {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: table;
+	padding: 0;
+	transition: all .3s ease;
+}
+
+.tile div p {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.cstyle {
+	font-size: 110px;
+}
+
+/* 使用图片的tile相关设置 */
+.tile figure {
+	margin: 0;
+}
+
+.tile img {
+	width: 100%;
+	height: 70%;
+}
+
+.tile-caption {
+	position: absolute;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 1em;
+	padding: 1em;
+	text-align: left;
+}
+
+.caption-left {
+	left: -100%;
+	top: 0;
+	bottom: 0;
+	width: 40%;
+	transition: left .3s linear;
+}
+
+.caption-bottom {
+	display: block;
+	bottom: 0;
+	/*width: 100%;  这行会导致宽度超出父元素*/
+	height: 25%;
+}
+
+.tile:hover .caption-left{
+	left: 0;
+}
+/* 图片设置结束 */
+
+/* slideTextUp */
+.slideTextUp div:nth-child(2) {
+	top: 100%;
+}
+
+.slideTextRight:hover {
+	background-color: white;
+}
+
+.slideTextUp:hover div {
+	transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+}
+
+.tile-1 p {
+	font-size: 1.3em;
+}
+/* slideTextUp end */
+
+
+/* slideTextRight */
+.slideTextRight div:nth-child(1) {
+	left: -100%;
+}
+
+.slideTextRight:hover div {
+	transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+	background-color: white;
+	color: #364748;
+}
+
+.tile-2 .cstyle {
+	font-size: 60px;
+}
+
+/* slideTextRight end */
+
+/* slideTextLeft */
+.slideTextLeft div:nth-child(2) {
+	left: 100%;
+}
+
+.slideTextLeft:hover div {
+	transform: translateX(-100%);
+	-webkit-transform: translateX(-100%);
+}
+
+/* slideTextLeft end */
+
+/* flip the tile */
+.rotate3d {
+	perspective: 800px;
+	-webkit-perspective: 800px;
+	position: relative;
+	overflow: visible;
+}
+
+.tile.rotate3d .face {
+	position: absolute;
+	transform-style: preserve-3d;
+	transition：transform 1s;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 1s;
+}
+
+.face div{
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	width: 100%; height: 100%;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+}
+
+.rotate3dX .back {
+	/*transform: rotateX(180deg);*/
+	-webkit-transform: rotateX(180deg);
+}
+
+.rotate3dY .back {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+
+.rotate3dX:hover .face:hover {
+	transform: rotateX(180deg);
+	-webkit-transform: rotateX(180deg);
+}
+
+.rotate3dY:hover .face:hover {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+/* flip end */
+
+/* Set background for each tile */
+.tile-1 {
+	background-color: #18e2f2;
+	color: white;
+}
+
+.tile-2 {
+	background-color: #364748;
+}
+
+.tile-3 {
+	background-color: #ddd;
+	color: #364748;
+}
+
+.tile-3:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+.tile-4 {
+
+}
+
+.tile-5 {
+	background-color: #fcc120;
+}
+
+.tile-5:hover {
+	background-color: #fff;
+	color: #fcc120;
+}
+
+.tile-6 {
+	background-color: #3ec7f3;
+}
+
+.tile-5 p,
+.tile-6 p,
+.tile-10 p {
+	font-size: 2em;
+	position: relative;
+	top: -5px;
+}
+
+.tile-5 span,
+.tile-6 span,
+.tile-10 span {
+	position: relative;
+	top: 10px;
+	font-size: 1.5em;
+	margin-right: .5em;
+}
+
+.tile-7 div {
+	background-color: #364748;
+	color: #ddd;
+}
+
+.tile-8 div{
+	background-color: #E41D3D;
+}
+
+.tile-9 {
+
+}
+
+.tile-9:hover .caption-bottom {
+	background-color: #364748;
+}
+
+.tile-10 {
+	background-color: #08B42A;
+}
+
+.tile-10:hover {
+	background-color: #fff;
+	color: #08B42A;
+}
+
+/*cols' style*/
+.col1,
+.col2,
+.col3 {
+	width: 99%;
+	margin: 1em auto;
+}
+
+@media screen and (min-width: 43.75em) {
+	.col1,
+	.col2,
+	.col3 {
+		float: left;
+		margin-right: 1%; 
+		width: 49%;
+	}
+}
+
+@media screen and (min-width: 64em) {
+	.col1,
+	.col2,
+	.col3 {
+		float: left;
+		margin-right: .5%; 
+		width: 31%;
+	}
+}

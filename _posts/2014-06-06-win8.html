@@ -1,3 +1,102 @@
 ---
 title: Windows 8
 ---
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>window8</title>
+	<link rel="stylesheet" href="/CSS/win.css">
+	<link rel="stylesheet" href="/CSS/foundation-icons.css">
+</head>
+<body>
+	<div class="demo-wrapper">
+		<!-- Corresponding pages -->
+		<!-- classnames include: 1) type of page 2) page name -->
+		<div class="s-page random-restored-page">
+			<div class="page-content">
+				<h2 class="page-title"></h2>
+				<div class="close-button s-close-button"></div>
+			</div>
+			<div class="s-page custom-page">
+				<div class="page-content">
+					<h2 class="page-title"></h2>
+					<div class="close-button s-close-button"></div>
+				</div>
+			</div>
+			<div class="r-page random-r-page">
+				<div class="page-content">
+					<h2 class="page-title"></h2>
+					<p></p>
+					<div class="close-button s-close-button"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Corresponding pages end -->
+
+		<!-- Dashboard -->
+		<div class="dashboard clearfix">
+			<ul class="tiles">
+				<div class="col1">
+					<li class="tile tile-big tile-1 slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+						<div><p>This tile's content slides up</p></div>
+						<div><p>View all tasks</p></div>
+					</li>
+					<li class="tile tile-small tile-2 slideTextRight" data-page-type="s-page" data-page-name="random-restored-page">
+						<div><p class="fi-arrow-right cstyle"></p></div>
+						<div><p>Tile's content slides right. Page opens from left</p></div>
+					</li>
+					<li class="tile tile-small last tile-3" data-page-type="r-page" data-page-name="random-r-page">
+						<div><p class="fi-calendar cstyle"></p></div>
+					</li>
+					<li class="tile tile-big tile-4 fig-tile" data-page-type="r-page" data-page-name="random-r-page">
+						<figure>
+							<img src="img1.jpg" alt="">
+							<figcaption class="tile-caption caption-left">Slide-out Caption from left</figcaption>
+						</figure>
+					</li>
+				</div>
+				<div class="col2">
+					<li class="tile tile-big tile-5">
+						<div><p><span class="fi-cloud"></span>Weather</p></div>
+					</li>
+					<li class="tile tile-big tile-6 slideTextLeft">
+						<div><p><span class="fi-social-skype cstyle"></span>Skype</p></div>
+						<div>
+							<p>Make a Call</p>
+						</div>
+					</li>
+					<li class="tile tile-small tile-7 rotate3d rotate3dX">
+						<div class="face">
+							<div class="front"><p>picasa</p></div>
+							<div class="back"><p>picasa l</p></div>
+							<!-- <div class="back"><p class="fi-social-picasa cstyle"></div> -->
+						</div>
+					</li>
+					<li class="tile tile-small last tile-8 rotate3d rotate3dY">
+						<div class="face">
+							<div class="front"><p class="fi-social-path cstyle"></p></div>
+							<div class="back"><p>Launch Path</p></div>
+						</div>
+					</li>
+				</div>
+				<div class="col3">
+					<li class="tile tile-2xbig tile-9">
+						<figure>
+							<img src="img2.jpg" alt="">
+							<figcaption class="tile-caption caption-bottom">Fixed Caption: Some Subtitle or Tile Description Goes Here with some kinda link or anything</figcaption>
+						</figure>
+					</li>
+					<li class="tile tile-big tile-10">
+						<div>
+							<p><span class="fi-social-evernote"></span>Evernote</p>
+						</div>
+					</li>
+				</div>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>
