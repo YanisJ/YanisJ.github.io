@@ -1,8 +1,229 @@
+.slidePageInFromLeft {
+	animation: slidePageInFromLeft .8s cubic-bezier(.01, 1, .22, .99) 1 0.25s normal forwards;
+	-webkit-animation: slidePageInFromLeft .8s cubic-bezier(.01, 1, .22, .99) 1 0.25s normal forwards;
+	-o-animation: slidePageInFromLeft .8s cubic-bezier(.01, 1, .22, .99) 1 0.25s normal forwards;
+}
+
+.openpage {
+	animation: rotatePageInFromRight 1s cubic-bezier(.66, .04, .36, 1.03) 1 normal forwards;
+	-webkit-animation: rotatePageInFromRight 1s cubic-bezier(.66, .04, .36, 1.03) 1 normal forwards;
+	-o-animation: rotatePageInFromRight 1s cubic-bezier(.66, .04, .36, 1.03) 1 normal forwards;
+}
+.slidePageBackLeft {
+	opacity: 1;
+	left: 0;
+	animation: slidePageBackLeft .8s ease-out 1 normal forwards;
+	-webkit-animation: slidePageBackLeft .8s ease-out 1 normal forwards;
+	-o-animation: slidePageBackLeft .8s ease-out 1 normal forwards;
+}
+
+.slidePageLeft {
+	opacity: 1;
+	transform: rotateY(0) translateZ(0); opacity: 1;
+	-webkit-transform: rotateY(0) translateZ(0); opacity: 1;
+	-o-transform: rotateY(0) translateZ(0); opacity: 1;
+	-ms-transform: rotateY(0) translateZ(0); opacity: 1;
+	animation: slidePageLeft .8s ease-out 1 normal forwards;
+	-webkit-animation: slidePageLeft .8s ease-out 1 normal forwards;
+	-o-animation: slidePageLeft .8s ease-out 1 normal forwards;
+}
+
+/* Effect of clicking the tile and closing the page */
+.fadeOutback {
+	animation: fadeOutBack 0.3s ease-out 1 normal forwards;
+	-webkit-animation: fadeOutBack 0.3s ease-out 1 normal forwards;
+	-o-animation: fadeOutBack 0.3s ease-out 1 normal forwards;
+}
+
+.fadeInForward-1, .fadeInForward-2, .fadeInForward-3 {
+	/* remember: in the second animation u have to set the final values reached by the first one */
+	opacity: 0;
+	transform: translateZ(-5em) scale(0.75);
+	-webkit-transform: translateZ(-5em) scale(0.75);
+	-o-transform: translateZ(-5em) scale(0.75);
+	-ms-transform: translateZ(-5em) scale(0.75);
+	animation: fadeInForward .5s cubic-bezier(.03, .93, .43, .77) .4s normal forwards;
+	-webkit-animation: fadeInForward .5s cubic-bezier(.03, .93, .43, .77) .4s normal forwards;
+	-o-animation: fadeInForward .5s cubic-bezier(.03, .93, .43, .77) .4s normal forwards;
+}
+
+.fadeInForward-2 {
+	animation-delay: .55s;
+	-webkit-animation-delay: .55s;
+	-o-animation-delay: .55s;
+}
+
+.fadeInForward-3 {
+	animation-delay: .7s;
+	-webkit-animation-delay: .7s;
+	-o-animation-delay: .7s;
+}
+
+
+/* ========keyframes=========== */
+@keyframes slidePageInFromLeft {
+	0% {opacity: 0;}
+	30% {opacity: 1;}
+	100% {opacity: 1; left: 0}
+}
+
+/* use for .openpage */
+@keyframes rotatePageInFromRight {
+	0% {
+		transform: rotateY(-90deg) translateZ(5em);
+		-webkit-transform: rotateY(-90deg) translateZ(5em);
+		-o-transform: rotateY(-90deg) translateZ(5em);
+		-ms-transform: rotateY(-90deg) translateZ(5em);
+		opacity: 0;
+	}
+	30% {opacity: 1}
+	100% {
+		transform: rotateY(0deg) translateZ(0em);
+		-webkit-transform: rotateY(0deg) translateZ(0em);
+		-o-transform: rotateY(0deg) translateZ(0em);
+		-ms-transform: rotateY(0deg) translateZ(0em);
+		opacity: 1;
+	}	
+}
+
+@keyframes slidePageBackLeft {
+	0% {
+		opacity: 1;
+		left: 0;
+		transform: scale(0.95);
+		-webkit-transform: scale(0.95);
+		-o-transform: scale(0.95);
+		-ms-transform: scale(0.95);
+	}
+	10% {
+		transform: scale(0.9);
+		-webkit-transform: scale(0.9);
+		-o-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+	}
+	70% {opacity: 1;}
+	100% {opacity: 0; left: -150%;}
+}
+
+@keyframes slidePageLeft {
+	0% {
+		left: 0;
+		transform: rotateY(0deg) translateZ(0em);
+		-webkit-transform: rotateY(0deg) translateZ(0em);
+		-o-transform: rotateY(0deg) translateZ(0em);
+		-ms-transform: rotateY(0deg) translateZ(0em);
+		opacity: 1;
+	}
+	70% {opacity: 1;}
+	100% {
+		opacity: 0;
+		left: -150%;
+		transform: rotateY(0deg);
+		-webkit-transform: rotateY(0deg);
+		-o-transform: rotateY(0deg);
+		-ms-transform: rotateY(0deg);
+	}
+}
+
+
+
+
+@keyframes fadeOutBack {
+	0% {
+		transform: translateX(-2em) scale(1);
+		-webkit-transform: translateX(-2em) scale(1);
+		-o-transform: translateX(-2em) scale(1);
+		-ms-transform: translateX(-2em) scale(1);
+		opacity: 1;
+	}
+	70% {
+		transform: translateZ(-5em) scale(0.6);
+		-webkit-transform: translateZ(-5em) scale(0.6);
+		-o-transform: translateZ(-5em) scale(0.6);
+		-ms-transform: translateZ(-5em) scale(0.6);
+		opacity: 0.5;
+	}
+	95% {
+		transform: translateZ(-5em) scale(0.6);
+		-webkit-transform: translateZ(-5em) scale(0.6);
+		-o-transform: translateZ(-5em) scale(0.6);
+		-ms-transform: translateZ(-5em) scale(0.6);
+		opacity: 0.5;
+	}
+	100% {
+		transform: translateX(-5em) scale(0);
+		-webkit-transform: translateX(-5em) scale(0);
+		-o-transform: translateX(-5em) scale(0);
+		-ms-transform: translateX(-5em) scale(0);
+		opacity: 0;
+	}
+}
+
+@keyframes fadeInForward {
+	0% {
+		transform: translateZ(-5em) scale(0);
+		-webkit-transform: translateZ(-5em) scale(0);
+		-o-transform: translateZ(-5em) scale(0);
+		-ms-transform: translateZ(-5em) scale(0);
+		opacity: 0;
+	}
+	100% {
+		transform: translateZ(0em) scale(1);
+		-webkit-transform: translateZ(0em) scale(1);
+		-o-transform: translateZ(0em) scale(1);
+		-ms-transform: translateZ(0em) scale(1);
+		opacity: 1;
+	}
+}
+
+
+/* =============================================================*/
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+html {
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	line-height: 1.5;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	background-color: #eee;
+	background-size: 100% 100%;
+}
+
+ul {
+	list-style-type: none;
+}
+
 .demo-wrapper {
 	padding: 2em .5em;
 	width: 100%;
 	height: 100%;
 	perspective: 3300px;
+	-webkit-perspective: 3300px;
+	-o-perspective: 3300px;
+	-ms-perspective: 3300px;
 	position: relative;
 }
 
@@ -43,6 +264,94 @@
 	}	
 }
 
+::-webkit-scrollbar {
+	width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #fff;
+}
+
+::-webkit-scrollbar-track {
+	background: #ddd;
+}
+
+
+
+/* style the corresponding pages */
+.r-page {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 2em;
+	font-weight: 300;
+	position: absolute;
+	right: 0; top: 0; left: 0; bottom: 0;
+	opacity: 0;
+	color: white;
+	z-index: 10;
+	padding: 10px;
+
+	transform-origin: 100% 0%;
+	-webkit-transform-origin: 100% 0%;
+	-o-transform-origin: 100% 0%;
+	-ms-transform-origin: 100% 0%;
+	transform: rotateY(-90deg) translateZ(5em);
+	-webkit-transform: rotateY(-90deg) translateZ(5em);
+	-o-transform: rotateY(-90deg) translateZ(5em);
+	-ms-transform: rotateY(-90deg) translateZ(5em);
+}
+
+.s-page {
+	height: 100%; width: 100%;
+	position: absolute;
+	top: 0;
+	left: -150%;
+	color: white;
+	z-index: 1;
+	text-align: center;
+	font-size: 2em;
+	font-weight: 300;
+}
+
+.page-content {
+	overflow-y: auto;
+	max-height: 100%;
+	font-size: .6em;
+	padding: .6em;
+	text-align: left; 
+}
+
+.s-page, .r-page {
+	background-color: white;
+	color: black;
+}
+
+.page-title {
+	margin: .25em 0;
+	font-weight: 100;
+	font-size: 3em;
+	text-align: center;
+}
+
+.close-button {
+	font-size: 1.5em;
+	width: 1em;
+	height: 1em;
+	position: absolute;
+	top: .75em;
+	right: .75em;
+	cursor: pointer;
+	line-height: .8em;
+	text-align: center;
+}
+/* corresponding page style end */
+
+
+
+
+/*==========================================================*/
+/*==========================================================*/
 /*tiles' style*/
 .tile {
 	float: left;
@@ -56,8 +365,9 @@
 	cursor: pointer;
 	position: relative;
 	background-color: #fff;
-	list-style-type: none;
-	transition: background-color 0.2s ease-out; 
+	transition: background-color 0.2s ease-out;
+	-webkit-transition: background-color 0.2s ease-out;
+	-o-transition: background-color 0.2s ease-out;
 }
 
 .tile-2xbig {
@@ -78,31 +388,7 @@
 	margin-right: 0;
 }
 
-.tile div {
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	display: table;
-	padding: 0;
-	transition: all .3s ease;
-}
-
-.tile div p {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.cstyle {
-	font-size: 110px;
-}
-
 /* 使用图片的tile相关设置 */
-.tile figure {
-	margin: 0;
-}
-
 .tile img {
 	width: 100%;
 	height: 70%;
@@ -124,19 +410,135 @@
 	bottom: 0;
 	width: 40%;
 	transition: left .3s linear;
+	-webkit-transition: left .3s linear;
+	-o-transition: left .3s linear;
 }
 
 .caption-bottom {
 	display: block;
 	bottom: 0;
-	/*width: 100%;  这行会导致宽度超出父元素*/
-	height: 25%;
+	/*width: 100%;  如果缺少box-sizing: border-box  会超出图片宽度，因为padding的存在*/
+	height: 40%;
 }
 
 .tile:hover .caption-left{
 	left: 0;
 }
 /* 图片设置结束 */
+
+
+.tile div {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: table;
+	/*padding: 0 1em;*/      /*这里设置的话会出现一些连带效应，翻转的部分，就必须设置display block*/
+	transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+}
+
+.tile div p {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.cstyle {
+	font-size: 110px;
+}
+
+/* Set style for each tile */
+.tile-1 {
+	background-color: #18e2f2;
+	color: white;
+}
+
+.tile-2 {
+	background-color: #364748;
+	color: white;
+}
+
+.tile-3 {
+	background-color: #ddd;
+	color: #364748;
+}
+
+.tile-3:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+.tile-4 {
+
+}
+
+.tile-5 {
+	background-color: #fcc120;
+	color: white;
+}
+
+.tile-5:hover {
+	background-color: white;
+	color: #fcc120;
+}
+
+.tile-6 {
+	background-color: #3ec7f3;
+	color: white;
+}
+
+.tile-5 p,
+.tile-6 p,
+.tile-10 p {
+	font-size: 2em;
+	position: relative;
+	top: -5px;
+}
+
+.tile-5 span,
+.tile-6 span,
+.tile-10 span {
+	position: relative;
+	top: 10px;
+	font-size: 1.5em;
+	margin-right: .5em;
+}
+
+.tile-7,
+.tile-8 {
+	background-color: transparent;
+}
+
+.tile-7 div {
+	/* 这里设置颜色，会有背面闪烁或文字消失的问题，颜色改为 3dX front back 中设置 */
+	/*background-color: #364748;     */  
+	/*color: #ddd;*/
+}
+
+.tile-8 div{
+	/* 同上 */
+	/*background-color: #E41D3D;*/
+}
+
+.tile-9 {
+
+}
+
+.tile-9:hover .caption-bottom {
+	background-color: #364748;
+}
+
+.tile-10 {
+	background-color: #08B42A;
+	color: white;
+}
+
+.tile-10:hover {
+	background-color: white;
+	color: #08B42A;
+}
 
 /* slideTextUp */
 .slideTextUp div:nth-child(2) {
@@ -192,29 +594,48 @@
 .rotate3d {
 	perspective: 800px;
 	-webkit-perspective: 800px;
-	position: relative;
+	-o-perspective: 800px;
+	-ms-perspective: 800px;
 	overflow: visible;
 }
 
 .tile.rotate3d .face {
-	position: absolute;
+	/*position: absolute;*/
 	transform-style: preserve-3d;
-	transition：transform 1s;
 	-webkit-transform-style: preserve-3d;
-	-webkit-transition: -webkit-transform 1s;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transition：transform 1s;
+	transition: -webkit-transform 1s;
+	transition：-o-transform 1s;
+	transition：-ms-transform 1s;
 }
 
 .face div{
+	/*display: block;*/
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
 	width: 100%; height: 100%;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+}
+
+.rotate3dX .front,
+.rotate3dX .back {
+	background-color: #364748;
+	color: #ddd;
+}
+
+.rotate3dY .front,
+.rotate3dY .back {
+	background-color: #E41D3D;
+	color: white;
 }
 
 .rotate3dX .back {
-	/*transform: rotateX(180deg);*/
+	transform: rotateX(180deg);
 	-webkit-transform: rotateX(180deg);
 }
 
@@ -234,85 +655,6 @@
 }
 /* flip end */
 
-/* Set background for each tile */
-.tile-1 {
-	background-color: #18e2f2;
-	color: white;
-}
-
-.tile-2 {
-	background-color: #364748;
-}
-
-.tile-3 {
-	background-color: #ddd;
-	color: #364748;
-}
-
-.tile-3:hover {
-	background-color: #fff;
-	color: #000;
-}
-
-.tile-4 {
-
-}
-
-.tile-5 {
-	background-color: #fcc120;
-}
-
-.tile-5:hover {
-	background-color: #fff;
-	color: #fcc120;
-}
-
-.tile-6 {
-	background-color: #3ec7f3;
-}
-
-.tile-5 p,
-.tile-6 p,
-.tile-10 p {
-	font-size: 2em;
-	position: relative;
-	top: -5px;
-}
-
-.tile-5 span,
-.tile-6 span,
-.tile-10 span {
-	position: relative;
-	top: 10px;
-	font-size: 1.5em;
-	margin-right: .5em;
-}
-
-.tile-7 div {
-	background-color: #364748;
-	color: #ddd;
-}
-
-.tile-8 div{
-	background-color: #E41D3D;
-}
-
-.tile-9 {
-
-}
-
-.tile-9:hover .caption-bottom {
-	background-color: #364748;
-}
-
-.tile-10 {
-	background-color: #08B42A;
-}
-
-.tile-10:hover {
-	background-color: #fff;
-	color: #08B42A;
-}
 
 /*cols' style*/
 .col1,
@@ -339,5 +681,242 @@
 		float: left;
 		margin-right: .5%; 
 		width: 31%;
+	}
+}
+
+
+
+/* ==================keyframes with prefixed====================*/
+
+/*===webkit=====================================================*/
+@-webkit-keyframes slidePageInFromLeft {
+	0% {opacity: 0;}
+	30% {opacity: 1;}
+	100% {opacity: 1; left: 0;}
+}
+
+/* use for .openpage */
+@-webkit-keyframes rotatePageInFromRight {
+	0% {
+		transform: rotateY(-90deg) translateZ(5em);
+		-webkit-transform: rotateY(-90deg) translateZ(5em);
+		-o-transform: rotateY(-90deg) translateZ(5em);
+		-ms-transform: rotateY(-90deg) translateZ(5em);
+		opacity: 0;
+	}
+	30% {opacity: 1}
+	100% {
+		transform: rotateY(0deg) translateZ(0em);
+		-webkit-transform: rotateY(0deg) translateZ(0em);
+		-o-transform: rotateY(0deg) translateZ(0em);
+		-ms-transform: rotateY(0deg) translateZ(0em);
+		opacity: 1;
+	}	
+}
+
+@-webkit-keyframes slidePageBackLeft {
+	0% {
+		opacity: 1;
+		left: 0;
+		transform: scale(0.95);
+		-webkit-transform: scale(0.95);
+		-o-transform: scale(0.95);
+		-ms-transform: scale(0.95);
+	}
+	10% {
+		transform: scale(0.9);
+		-webkit-transform: scale(0.9);
+		-o-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+	}
+	70% {opacity: 1;}
+	100% {opacity: 0; left: -150%;}
+}
+
+@-webkit-keyframes slidePageLeft {
+	0% {
+		left: 0;
+		transform: rotateY(0deg) translateZ(0em);
+		-webkit-transform: rotateY(0deg) translateZ(0em);
+		-o-transform: rotateY(0deg) translateZ(0em);
+		-ms-transform: rotateY(0deg) translateZ(0em);
+		opacity: 1;
+	}
+	70% {opacity: 1;}
+	100% {
+		opacity: 0;
+		left: -150%;
+		transform: rotateY(0deg);
+		-webkit-transform: rotateY(0deg);
+		-o-transform: rotateY(0deg);
+		-ms-transform: rotateY(0deg);
+	}
+}
+
+
+
+
+@-webkit-keyframes fadeOutBack {
+	0% {
+		transform: translateX(-2em) scale(1);
+		-webkit-transform: translateX(-2em) scale(1);
+		-o-transform: translateX(-2em) scale(1);
+		-ms-transform: translateX(-2em) scale(1);
+		opacity: 1;
+	}
+	70% {
+		transform: translateZ(-5em) scale(0.6);
+		-webkit-transform: translateZ(-5em) scale(0.6);
+		-o-transform: translateZ(-5em) scale(0.6);
+		-ms-transform: translateZ(-5em) scale(0.6);
+		opacity: 0.5;
+	}
+	95% {
+		transform: translateZ(-5em) scale(0.6);
+		-webkit-transform: translateZ(-5em) scale(0.6);
+		-o-transform: translateZ(-5em) scale(0.6);
+		-ms-transform: translateZ(-5em) scale(0.6);
+		opacity: 0.5;
+	}
+	100% {
+		transform: translateX(-5em) scale(0);
+		-webkit-transform: translateX(-5em) scale(0);
+		-o-transform: translateX(-5em) scale(0);
+		-ms-transform: translateX(-5em) scale(0);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes fadeInForward {
+	0% {
+		transform: translateZ(-5em) scale(0);
+		-webkit-transform: translateZ(-5em) scale(0);
+		-o-transform: translateZ(-5em) scale(0);
+		-ms-transform: translateZ(-5em) scale(0);
+		opacity: 0;
+	}
+	100% {
+		transform: translateZ(0em) scale(1);
+		-webkit-transform: translateZ(0em) scale(1);
+		-o-transform: translateZ(0em) scale(1);
+		-ms-transform: translateZ(0em) scale(1);
+		opacity: 1;
+	}
+}
+
+
+/*===opera======================================================*/
+@-o-keyframes slidePageInFromLeft {
+	0% {opacity: 0;}
+	30% {opacity: 1;}
+	100% {opacity: 1; left: 0}
+}
+
+/* use for .openpage */
+@-o-keyframes rotatePageInFromRight {
+	0% {
+		transform: rotateY(-90deg) translateZ(5em);
+		-webkit-transform: rotateY(-90deg) translateZ(5em);
+		-o-transform: rotateY(-90deg) translateZ(5em);
+		-ms-transform: rotateY(-90deg) translateZ(5em);
+		opacity: 0;
+	}
+	30% {opacity: 1}
+	100% {
+		transform: rotateY(0deg) translateZ(0em);
+		-webkit-transform: rotateY(0deg) translateZ(0em);
+		-o-transform: rotateY(0deg) translateZ(0em);
+		-ms-transform: rotateY(0deg) translateZ(0em);
+		opacity: 1;
+	}	
+}
+
+@-o-keyframes slidePageBackLeft {
+	0% {
+		opacity: 1;
+		left: 0;
+		transform: scale(0.95);
+		-webkit-transform: scale(0.95);
+		-o-transform: scale(0.95);
+		-ms-transform: scale(0.95);
+	}
+	10% {
+		transform: scale(0.9);
+		-webkit-transform: scale(0.9);
+		-o-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+	}
+	70% {opacity: 1;}
+	100% {opacity: 0; left: -150%;}
+}
+
+@-o-keyframes slidePageLeft {
+	0% {
+		left: 0;
+		transform: rotateY(0deg) translateZ(0em);
+		-webkit-transform: rotateY(0deg) translateZ(0em);
+		-o-transform: rotateY(0deg) translateZ(0em);
+		-ms-transform: rotateY(0deg) translateZ(0em);
+		opacity: 1;
+	}
+	70% {opacity: 1;}
+	100% {
+		opacity: 0;
+		left: -150%;
+		transform: rotateY(0deg);
+		-webkit-transform: rotateY(0deg);
+		-o-transform: rotateY(0deg);
+		-ms-transform: rotateY(0deg);
+	}
+}
+
+
+
+
+@-o-keyframes fadeOutBack {
+	0% {
+		transform: translateX(-2em) scale(1);
+		-webkit-transform: translateX(-2em) scale(1);
+		-o-transform: translateX(-2em) scale(1);
+		-ms-transform: translateX(-2em) scale(1);
+		opacity: 1;
+	}
+	70% {
+		transform: translateZ(-5em) scale(0.6);
+		-webkit-transform: translateZ(-5em) scale(0.6);
+		-o-transform: translateZ(-5em) scale(0.6);
+		-ms-transform: translateZ(-5em) scale(0.6);
+		opacity: 0.5;
+	}
+	95% {
+		transform: translateZ(-5em) scale(0.6);
+		-webkit-transform: translateZ(-5em) scale(0.6);
+		-o-transform: translateZ(-5em) scale(0.6);
+		-ms-transform: translateZ(-5em) scale(0.6);
+		opacity: 0.5;
+	}
+	100% {
+		transform: translateX(-5em) scale(0);
+		-webkit-transform: translateX(-5em) scale(0);
+		-o-transform: translateX(-5em) scale(0);
+		-ms-transform: translateX(-5em) scale(0);
+		opacity: 0;
+	}
+}
+
+@-o-keyframes fadeInForward {
+	0% {
+		transform: translateZ(-5em) scale(0);
+		-webkit-transform: translateZ(-5em) scale(0);
+		-o-transform: translateZ(-5em) scale(0);
+		-ms-transform: translateZ(-5em) scale(0);
+		opacity: 0;
+	}
+	100% {
+		transform: translateZ(0em) scale(1);
+		-webkit-transform: translateZ(0em) scale(1);
+		-o-transform: translateZ(0em) scale(1);
+		-ms-transform: translateZ(0em) scale(1);
+		opacity: 1;
 	}
 }
