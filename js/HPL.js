@@ -7,12 +7,12 @@
 					Left = $this.offset().left,
 					isFall =$this.hasClass('falldown');
 				if(!isFall){
-					if(Left <= 1043-100&&Left >= 396-200){
+					if(Left <= 1243&&Left >= 96-200){
 					$this.addClass('falldown');
 					};
 				}
 				else{
-					if(Left>1043-100||Left<230){
+					if(Left>1243||Left<230-300){
 					$this.removeClass('falldown');
 					};
 				}
