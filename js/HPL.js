@@ -12,7 +12,7 @@
 					};
 				}
 				else{
-					if(Left>1043-100||Left<210){
+					if(Left>1043-100||Left<230){
 					$this.removeClass('falldown');
 					};
 				}
