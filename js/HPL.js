@@ -1,6 +1,6 @@
 jQuery(function($){
 	var list = $('.portfolio-items'),
-		Vsight = $(window).width(),
+		Vsight = $('.site').width(),
 		showVisibleItems = function(){
 			list.children('.item').each(function(el, i){
 				var $this = $(this),
