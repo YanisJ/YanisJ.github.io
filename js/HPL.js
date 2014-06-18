@@ -12,12 +12,12 @@
 					};
 				}
 				else{
-					if(Left>1043-100||Left<396-200){
+					if(Left>1043-100||Left<210){
 					$this.removeClass('falldown');
 					};
 				}
 			});
-		// console.log(Vsight);
+		console.log(Vsight);
 		};
 	showVisibleItems();
 
