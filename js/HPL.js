@@ -17,10 +17,8 @@ jQuery(function($){
 					};
 				}
 			});
-
-			
-			
 		};
+		console.log(Vsight);
 	showVisibleItems();
 
 	list.scroll(function(){
