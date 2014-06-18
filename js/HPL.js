@@ -1,24 +1,24 @@
-jQuery(function($){
+(function($){
 	var list = $('.portfolio-items'),
-		Vsight = $('.site').width(),
+		// Vsight = $('.site').width(),
 		showVisibleItems = function(){
 			list.children('.item').each(function(el, i){
 				var $this = $(this),
 					Left = $this.offset().left,
 					isFall =$this.hasClass('falldown');
 				if(!isFall){
-					if(Left <= Vsight-100&&Left >= -200){
+					if(Left <= 1043-100&&Left >= 396-200){
 					$this.addClass('falldown');
 					};
 				}
 				else{
-					if(Left>Vsight-100||Left<-200){
+					if(Left>1043-100||Left<396-200){
 					$this.removeClass('falldown');
 					};
 				}
 			});
+		// console.log(Vsight);
 		};
-		console.log(Vsight);
 	showVisibleItems();
 
 	list.scroll(function(){
