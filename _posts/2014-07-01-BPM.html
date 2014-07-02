@@ -262,6 +262,7 @@ title: 图片切换效果
 	</div>
 
 	<script src="/js/jquery-2.1.1.min.js"></script>
+	<script src="/js/modernizr-2.8.2.js"></script>
 	<script>
 		var oBtn        = $('.cn-button'),
 			oWrap       = $('.cn'),
@@ -269,7 +270,13 @@ title: 图片切换效果
 			oBigPic     = $('.BP img'),
 			zi          = 2,
 			recent      = 0,
-			isAnimating = false;
+			isAnimating = false,
+			transEndEventNames = {
+				'WebkitTransition': 'webkitTransitionEnd',
+				'MozTransition'   : 'transitionend',
+				'transition'      : 'transitionend'
+			},
+			transEndEventName  = transEndEventNames[Modernizr.prefixed('transition')];
 
 		// console.log(oBigPic);
 
@@ -296,13 +303,13 @@ title: 图片切换效果
 			 		recent = index;
 			 		$(nextPic).addClass('recent-img');
 			 		currentPic.style.top = -currentPic.height + 'px';
-			 		$(currentPic).bind('transitionend', function(event) {
+			 		$(currentPic).bind(transEndEventName, function(event) {
 			 			/* Act on the event */
 			 			if(!($(event.target).hasClass('open-img')))return false;
 			 			$(currentPic).removeClass('open-img');
 			 			currentPic.style.top = '0px';
 			 			$(nextPic).addClass('open-img').removeClass('recent-img');
-			 			$(currentPic).unbind('transitionend');
+			 			$(currentPic).unbind(transEndEventName);
 			 			isAnimating = false;
 				 	});
 			 	};
