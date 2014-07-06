@@ -167,16 +167,24 @@ title: 图片切换效果
 
 		.panel.current .bg-img {
 			transition: transform 1.1s ease-in-out;
+			-webkit-transition: -webkit-transform 1.1s ease-in-out;
 		}
 
 		.panel.active .bg-tile {
 			animation: scaleDown 1.1s ease-in-out;
+			-webkit-animation: scaleDown 1.1s ease-in-out;
 		}
 
 		@keyframes scaleDown {
 			from {transform: translate3D(0, 0, 480px);}
 			to   {transform: translate3D(0, 0, 0);}
 		}	
+
+		@-webkit-keyframes scaleDown {
+			from {-webkit-transform: translate3D(0, 0, 480px);}
+			to   {-webkit-transform: translate3D(0, 0, 0);}
+		}
+
 
 		
 
