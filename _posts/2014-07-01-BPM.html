@@ -58,8 +58,11 @@ title: 图片切换效果
 			color: white;
 		}
 
-		.BP img {
-			/*display: block;*/
+		
+
+	/*这段留下代用，可能会用于兼容不支持CSS3的部分*/
+		/*.BP img {
+			display: block;
 			width: 100%;
 			height: 0;
 			position: fixed;
@@ -78,9 +81,136 @@ title: 图片切换效果
 		img.recent-img {
 			z-index: 1;
 			height: auto;
+		}*/
+
+
+
+	/*大图片设置
+	=====================================================================================*/
+		.BP div {
+			position: absolute;
+
 		}
 
+		.BP,
+		.panel {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.BP,
+		.panel,
+		.bg-tile,
+		.bg-img {
+			overflow: hidden;
+		}
+
+		.panel {
+			z-index: 0;
+			perspective: 1200px;
+		}
+
+		.BP .panel .bg-tile {
+			width: 50%;
+			height: 50%;
+
+		}
+
+		.bg-tile:nth-child(2),
+		.bg-tile:nth-child(4) {
+			left: 50%;
+		}
+
+		.bg-tile:nth-child(3),
+		.bg-tile:nth-child(4) {
+			top: 50%;
+		}
+
+
+		.bg-img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.bg-img img {
+			position: absolute;
+			display: block;
+			height: 200%;
+		}
+
+		@media screen and (min-aspect-ratio:1280/850) {
+			.bg-img img {
+				width: 200%;
+				height: auto;
+			}
+		}
+
+		.bg-tile:nth-child(2) .bg-img img,
+		.bg-tile:nth-child(4) .bg-img img {
+			left: -100%;
+		}
+
+		.bg-tile:nth-child(3) .bg-img img,
+		.bg-tile:nth-child(4) .bg-img img {
+			top: -100%;
+		}
+
+		.panel.current {
+			z-index: 2;
+		}
+
+		.panel.active {
+			z-index: 1;
+		}
+
+		.panel.current .bg-img {
+			transition: transform 1.1s ease-in-out;
+		}
+
+		.panel.active .bg-tile {
+			animation: scaleDown 1.1s ease-in-out;
+		}
+
+		@keyframes scaleDown {
+			from {transform: translate3D(0, 0, 480px);}
+			to   {transform: translate3D(0, 0, 0);}
+		}	
+
+		
+
+	/*展开按钮
+	=====================================================================================*/
+		.cn-button {
+			z-index: 1002;
+			width: 2.5em;
+			height: 2.5em;
+			background-color: black;
+			color: white;
+			opacity: 0.9;
+
+			position: fixed;
+			box-shadow: 0px 0px 20px #888;
+
+			
+			left: 50%;
+			margin-left: -1.25em;
+			bottom: -1.25em;
+			border-radius: 50%;
+
+			text-align: center;
+			font-size: 2.5em;
+
+			cursor: pointer;
+		}
+
+
+
+		/*小图片设置
+	=====================================================================================*/
 		.cn {
+			font-size: 0.8em;
 			width: 28.5em;
 			height: 28.5em;
 			/*border: 1px solid #ccc;*/
@@ -100,14 +230,13 @@ title: 图片切换效果
 			-webkit-transform: scale(0.1);
 			
 			transition: all 0.5s ease;
-			-webkit-transition: all 0.5s ease;
 		}
 		
 		.cn:after {
 			content: "";
 			display: block;
-			width: 260px;
-			height: 260px;
+			width: 16em;
+			height: 16em;
 			z-index: 1;
 			border-radius: 50%;
 
@@ -119,28 +248,6 @@ title: 图片切换效果
 
 		}
 
-		.cn-button {
-			z-index: 1002;
-			width: 2.5em;
-			height: 2.5em;
-			background-color: black;
-			color: white;
-			opacity: 0.9;
-
-			position: fixed;
-			box-shadow: 0px 0px 20px #888;
-
-			
-			left: 50%;
-			margin-left: -1.25em;
-			bottom: -1.25em;
-			border-radius: 50%;
-
-			text-align: center;
-			font-size: 3em;
-
-			cursor: pointer;
-		}
 
 		.cn li {
 
@@ -149,16 +256,19 @@ title: 图片切换效果
 			/*background-color: black;*/
 			position: absolute;
 			overflow: hidden;
+
+			top: 50%;
+			left: 50%;
+			margin-top: -14.25em;
+			margin-left: -14.25em;
 			/*background: radial-gradient(circle, red 30%, red 30%);*/
-			transform: rotate(70deg) skew(50deg);
-			-webkit-transform: rotate(70deg) skew(50deg);
+			transform: rotate(70deg) skew(53deg);
+			-webkit-transform: rotate(70deg) skew(53deg);
 
 
 			transform-origin: 100% 100%;
 			-webkit-transform-origin: 100% 100%;
-			
 			transition-delay: 0.25s;
-			-webkit-transition-delay: 0.25s;
 
 			cursor: pointer;
 		}
@@ -168,15 +278,17 @@ title: 图片切换效果
 			height: 28.5em;
 			display: block;
 			position: absolute;
+
+			top: 50%;
+			left: 50%;
+			margin-top: -7.125em;
+			margin-left: -7.125em;
 			
 			border-radius: 50%;
-			-webkit-border-radius: 50%;
-
-			transform: skew(-50deg) rotate(-70deg);
-			-webkit-transform: skew(-50deg) rotate(-70deg);
+			transform: skew(-53deg) rotate(-70deg);
+			-webkit-transform: skew(-53deg) rotate(-70deg);
 
 			transition: all 0.3s ease;
-			-webkit-transition: all 0.3s ease;
 		}
 
 
@@ -192,42 +304,41 @@ title: 图片切换效果
 		
 
 		.opened-cn li:nth-child(1) {
-			transform: rotate(-14deg) skew(50deg);
-			-webkit-transform: rotate(-14deg) skew(50deg);
+			transform: rotate(-10deg) skew(53deg);
+			-webkit-transform: rotate(-14deg) skew(53deg);
 		}
 
 		.opened-cn li:nth-child(2) {
-			transform: rotate(28deg) skew(50deg);
-			-webkit-transform: rotate(28deg) skew(50deg);
+			transform: rotate(30deg) skew(53deg);
+			-webkit-transform: rotate(28deg) skew(53deg);
 		}
 
 		.opened-cn li:nth-child(4) {
-			transform: rotate(112deg) skew(50deg);
-			-webkit-transform: rotate(112deg) skew(50deg);
+			transform: rotate(110deg) skew(53deg);
+			-webkit-transform: rotate(112deg) skew(53deg);
 		}
 
 		.opened-cn li:nth-child(5) {
-			transform: rotate(154deg) skew(50deg);
-			-webkit-transform: rotate(154deg) skew(50deg);
+			transform: rotate(150deg) skew(53deg);
+			-webkit-transform: rotate(154deg) skew(53deg);
 		}
 		
 		.cn li:nth-child(3) {
-			transform: rotate(70deg) skew(50deg);
-			-webkit-transform: rotate(70deg) skew(50deg);
+			transform: rotate(70deg) skew(53deg);
+			-webkit-transform: rotate(70deg) skew(53deg);
 			z-index: 1;
 		}
 		
 
 		.cn li span img {
 			/*display: block;*/
-			width: 460px;
-			height: 130px;
+			width: 28.5em;
+			height: 8.125em;
 
 			transition: all 0.3s ease;
-			-webkit-transition: all 0.3s ease;
 		}
 		.cn li:hover img {
-			height: 150px;
+			height: 9em;
 		}
 
 		
@@ -253,11 +364,16 @@ title: 图片切换效果
 	<div class="cn-button">+</div>
 	<div class="cn">
 		<ul>
-			<li><span><img src="/images/bpm/smallP/p1s.jpg" alt=""></span></li>
-			<li><span><img src="/images/bpm/smallP/p2s.jpg" alt=""></span></li>
-			<li><span><img src="/images/bpm/smallP/p3s.jpg" alt=""></span></li>
-			<li><span><img src="/images/bpm/smallP/p4s.jpg" alt=""></span></li>
-			<li><span><img src="/images/bpm/smallP/p5s.jpg" alt=""></span></li>
+			<li><span><img src="/images/bpm/smallP/p1s.jpg" alt=""></span>
+			</li>
+			<li><span><img src="/images/bpm/smallP/p2s.jpg" alt=""></span>
+			</li>
+			<li><span><img src="/images/bpm/smallP/p3s.jpg" alt=""></span>
+			</li>
+			<li><span><img src="/images/bpm/smallP/p4s.jpg" alt=""></span>
+			</li>
+			<li><span><img src="/images/bpm/smallP/p5s.jpg" alt=""></span>
+			</li>
 		</ul>
 	</div>
 
@@ -276,9 +392,56 @@ title: 图片切换效果
 				'MozTransition'   : 'transitionend',
 				'transition'      : 'transitionend'
 			},
-			transEndEventName  = transEndEventNames[Modernizr.prefixed('transition')];
+			transEndEventName  = transEndEventNames[Modernizr.prefixed('transition')]，
+			transforms = {
+			'next':[
+				'translate3d(0, ' + (window.innerHeight/2+10) + 'px, 0)',
+				'translate3d(-' + (window.innerWidth/2+10) + 'px, 0, 0)',
+				'translate3d(' + (window.innerWidth/2+10) + 'px, 0, 0)',
+				'translate3d(0, -' + (window.innerHeight/2+10) + 'px, 0)'
+			],
+			'prev':[
+				'translate3d(' + (window.innerWidth/2+10) + 'px, 0, 0)',
+				'translate3d(0, ' + (window.innerHeight/2+10) + 'px, 0)',
+				'translate3d(0, -' + (window.innerHeight/2+10) + 'px, 0)',
+				'translate3d(-' + (window.innerWidth/2+10) + 'px, 0, 0)'
+			]};
 
-		// console.log(oBigPic);
+		
+		// 将原图分为4部分，分后的外观和目前保持一致
+	// ===================================================
+
+
+
+		// newStyle存储新结构的HTML语句
+		var newStyle = '';
+
+
+		for (var i = 0; i < oBigPic.length; i++) {
+
+			var news = '',
+				img  = $(oBigPic[i]).attr('src');
+
+
+			for (var j = 0; j < 4; j++) {
+				news += '<div class="bg-tile"><div class="bg-img"><img src="' + img +'" alt=""></div></div>';
+			};
+
+			news = '<div class="panel">' + news + '</div>';
+
+			newStyle = newStyle + news;
+
+		};
+
+
+		oBigPic.remove();
+
+		BP.html(newStyle);
+
+		
+	// ===================================================
+
+
 
 		oBtn.click(function(event) {
 			/* Act on the event */
@@ -292,28 +455,100 @@ title: 图片切换效果
 			}
 		});
 
+		
+		var oPanels = $('.BP .panel');
+
+
+		// oLis.each(function(index, oLi) {
+		// 	 $(this).click(function(event) {
+		// 	 	/* Act on the event */
+		// 	 	if(index != recent){
+		// 		 	if(isAnimating == true)return false;
+		// 		 	isAnimating = true;
+			 		
+		// 	 		var currentPic = oBigPic[recent],
+		// 	 			nextPic    = oBigPic[index];
+			 		
+		// 	 		$(nextPic).addClass('recent-img');
+		// 	 		currentPic.style.top = -currentPic.height + 'px';
+		// 	 		recent = index;
+			 		
+		// 	 		$(currentPic).bind(transEndEventName, function(event) {
+		// 	 			/* Act on the event */
+		// 	 			if(!($(event.target).hasClass('open-img')))return false;
+		// 	 			$(currentPic).removeClass('open-img');
+		// 	 			currentPic.style.top = '0px';
+		// 	 			$(nextPic).addClass('open-img').removeClass('recent-img');
+		// 	 			$(currentPic).unbind(transEndEventName);
+		// 	 			isAnimating = false;
+		// 		 	});
+		// 	 	};
+		// 	 });
+		// });
+
 		oLis.each(function(index, oLi) {
-			 $(this).click(function(event) {
-			 	/* Act on the event */
+			
+			$(this).click(function(event) {
+			 	
+			 	// 判定被点击的小图是否是当前图片，如果是则不做任何动作
 			 	if(index != recent){
+			 		
+			 		// 判定大图是否在运动中：
+			 		// 是：不做动作直接返回
 				 	if(isAnimating == true)return false;
+				 	
+				 	// 不是：先将isAnimating设为true，以免运动中反复点击小图，导致监听混乱
 				 	isAnimating = true;
-			 		var currentPic = oBigPic[recent],
-			 			nextPic    = oBigPic[index];
+
+			 		
+			 		// 每次点击，将被点击图片放在中间 ,此功能暂不使用
+			 		// oWrap.css('transform', 'rotate(' + (2-index) * 40 + 'deg)');
+
+				 	
+				 	// 获取element：
+				 		// currentPic 当前显示大图
+				 		// nextPic    下一个要显示的大图
+				 		// effect
+			 		var currentPanel = oPanels[recent],
+			 			nextPanel    = oPanels[index],
+		 				effect       = recent>index ? 'prev':'next';
+			 		
+
+			 		// 完成之后下一张图会成为当前图片，所以修改recent的值
 			 		recent = index;
-			 		$(nextPic).addClass('recent-img');
-			 		currentPic.style.top = -currentPic.height + 'px';
-			 		$(currentPic).bind(transEndEventName, function(event) {
-			 			/* Act on the event */
-			 			if(!($(event.target).hasClass('open-img')))return false;
-			 			$(currentPic).removeClass('open-img');
-			 			currentPic.style.top = '0px';
-			 			$(nextPic).addClass('open-img').removeClass('recent-img');
-			 			$(currentPic).unbind(transEndEventName);
+
+			 		// 运动开始
+			 		$(nextPanel).addClass('active');
+			 		$(currentPanel).find('.bg-img').each(function(index, val) {
+			 			
+		 				$(this).css('transform', transforms[effect][index]);
+			 			
+			 		});
+			 		// currentPic.style.top = -currentPic.height + 'px';
+			 		
+
+			 		// 监听运动完成事件
+			 		var total = 0;
+
+			 		function transEnd(event) {
+			 			// console.log(event.target);
+			 			// if(event && !($(event.target).hasClass('open-img')))return false;
+			 			// alert(1);
+			 			total += 1;
+			 			if(total < 4)return false;
+
+			 			$(currentPanel).removeClass('current');
+			 			$(nextPanel).addClass('current').removeClass('active');
+			 			$(this).unbind(transEndEventName, transEnd);
+			 			$(currentPanel).find('.bg-img').each(function(index, el) {
+			 				$(this).css('transform', '');
+			 			});
 			 			isAnimating = false;
-				 	});
+			 		}
+
+			 		$(currentPanel).bind(transEndEventName, transEnd);
 			 	};
-			 });
+			});
 		});
 	</script>
 </body>
