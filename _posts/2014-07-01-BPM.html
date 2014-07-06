@@ -461,34 +461,6 @@ title: 图片切换效果
 
 		$(oPanels[recent]).addClass('current');	
 
-
-		// oLis.each(function(index, oLi) {
-		// 	 $(this).click(function(event) {
-		// 	 	/* Act on the event */
-		// 	 	if(index != recent){
-		// 		 	if(isAnimating == true)return false;
-		// 		 	isAnimating = true;
-			 		
-		// 	 		var currentPic = oBigPic[recent],
-		// 	 			nextPic    = oBigPic[index];
-			 		
-		// 	 		$(nextPic).addClass('recent-img');
-		// 	 		currentPic.style.top = -currentPic.height + 'px';
-		// 	 		recent = index;
-			 		
-		// 	 		$(currentPic).bind(transEndEventName, function(event) {
-		// 	 			/* Act on the event */
-		// 	 			if(!($(event.target).hasClass('open-img')))return false;
-		// 	 			$(currentPic).removeClass('open-img');
-		// 	 			currentPic.style.top = '0px';
-		// 	 			$(nextPic).addClass('open-img').removeClass('recent-img');
-		// 	 			$(currentPic).unbind(transEndEventName);
-		// 	 			isAnimating = false;
-		// 		 	});
-		// 	 	};
-		// 	 });
-		// });
-
 		oLis.each(function(index, oLi) {
 			
 			$(this).click(function(event) {
@@ -525,6 +497,7 @@ title: 图片切换效果
 			 		$(currentPanel).find('.bg-img').each(function(index, val) {
 			 			
 		 				$(this).css('transform', transforms[effect][index]);
+		 				$(this).css('WebkitTransform', transforms[effect][index]);
 			 			
 			 		});
 			 		// currentPic.style.top = -currentPic.height + 'px';
@@ -545,6 +518,7 @@ title: 图片切换效果
 			 			$(this).unbind(transEndEventName, transEnd);
 			 			$(currentPanel).find('.bg-img').each(function(index, el) {
 			 				$(this).css('transform', '');
+			 				$(this).css('WebkitTransform', '');
 			 			});
 			 			isAnimating = false;
 			 		}
