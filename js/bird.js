@@ -54,6 +54,11 @@
 	Bird.prototype.animation = function(){
 
 		this.speed =  0.5 + this.speed;
+
+		if(isNaN(this.birdTop)){
+			this.birdTop = parseInt(this.bird.css('top'));
+		}
+		
 		var distance = this.birdTop+this.speed;
 
 
@@ -143,7 +148,7 @@
 		pipe.append(pipeTop);
 		pipe.append(pipeBottom);
 			
-		
+		pipe.css('left', 484);
 
 		$(document).trigger('pipe_create', pipe);
 		return pipe;
@@ -161,9 +166,9 @@
 		else{
 			for(i in this.pipes){
 				var pipe = this.pipes[i],
-					pos = parseInt($(pipe).css('right'));
+					pos = parseInt($(pipe).css('left'));
 				
-				$(pipe).css('right', pos+3);
+				$(pipe).css('left', pos-3);
 
 			}
 		}
@@ -180,7 +185,7 @@
 			this.pipes.splice(0,1);
 		}
 
-		if(parseInt(lastPipe.css('right'))>110){       //由100修改为110
+		if(parseInt(lastPipe.css('left'))==205){       
 			this.pipes.push(this.addPip());
 		}
 

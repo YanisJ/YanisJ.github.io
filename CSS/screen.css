@@ -647,7 +647,6 @@ ul.posts span {
     
     /*background-color: red;*/
     position: absolute;
-    right: -100px;
 
     bottom: 64px;
     /*animation: movepip 5s linear;*/
@@ -658,7 +657,7 @@ ul.posts span {
     position: absolute;
     
     background-image: url('/images/flappy_bird/pipe_body.png');
-    background-size: 65px auto;
+    background-size: 65px 1px;      /*此处用1px，如果用auto，在chrome下无法正常显示*/
     background-repeat: repeat-y;
 }
 
