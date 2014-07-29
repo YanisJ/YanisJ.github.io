@@ -633,7 +633,7 @@ ul.posts span {
 
 .bird.down {
     transition: transform 1.5s;
-    -webkit-transition: transform 1.5s;
+    -webkit-transition: -webkit-transform 1.5s;
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     animation-play-state: paused;
