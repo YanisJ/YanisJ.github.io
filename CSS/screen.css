@@ -614,19 +614,30 @@ ul.posts span {
     100% {background-position: 0 0}
 }
 
+@-webkit-keyframes fly {
+    0%   {background-position: 0 0}
+    33%  {background-position: 0 -35px}
+    66%  {background-position: 0 -70px}
+    100% {background-position: 0 0}
+}
+
 .bird.fly {
     animation: fly 0.2s steps(1) infinite;
-
+    -webkit-animation: fly 0.2s steps(1) infinite;
 }
 
 .bird.up {
     transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
 }
 
 .bird.down {
     transition: transform 1.5s;
+    -webkit-transition: transform 1.5s;
     transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
     animation-play-state: paused;
+    -webkit-animation-play-state: paused;
 }
 
 /*pipe*/
@@ -685,10 +696,10 @@ ul.posts span {
     background-repeat: no-repeat;
 }
 
-@keyframes movepip {
+/*@keyframes movepip {
     from {right: -100px;}
     to   {right:  484px;}
-}
+}*/
 
 
 
