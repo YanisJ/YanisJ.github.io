@@ -569,6 +569,8 @@ ul.posts span {
     overflow: hidden;
 
     position: relative;
+
+    margin: 10% auto;
 }
 
 .stage .ground {
