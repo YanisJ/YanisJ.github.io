@@ -229,8 +229,6 @@ ul.posts span {
 
 /*===============================*/
 .accordian {
-    margin: 0;
-    padding: 0;
     width: 647px;
     height: 300px;
     overflow: hidden;
@@ -242,14 +240,14 @@ ul.posts span {
 
 .accordian ul {
     width: 1200px;
-    margin: 0;
-    padding: 0;
 }
 
 .accordian li {
     position: relative;
+    display: block;    /*first d*/
     width: 129px;
     float: left;
+    
     list-style-type: none;
 
     border-left: 1px solid #888;
@@ -273,8 +271,8 @@ ul.posts span {
 
 .accordian img {
     display: block;
-    width: 527px;
-    height: 300px;
+    /*width: 527px;*/
+    /*height: 300px;*/
 }
 
 /* imagetitle */
