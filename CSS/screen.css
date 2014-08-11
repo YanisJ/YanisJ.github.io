@@ -619,6 +619,26 @@ ul.posts span {
     100% {background-position: 0 0}
 }
 
+@keyframes cover_fly {
+    0%   {top: 150px}
+    50%  {top: 170px}
+    100% {top: 150px}
+}
+
+@-webkit-keyframes cover_fly {
+    0%   {top: 150px}
+    50%  {top: 170px}
+    100% {top: 150px}
+}
+
+.bird.cover_style {
+    top: 150px;
+    left: 310px;
+
+    animation: cover_fly 1.5s infinite, fly 0.3s steps(1) infinite;
+    -webkit-animation: cover_fly 1s infinite, fly 0.3s steps(1) infinite;
+}
+
 .bird.fly {
     animation: fly 0.2s steps(1) infinite;
     -webkit-animation: fly 0.2s steps(1) infinite;
@@ -731,3 +751,120 @@ ul.posts span {
     .score #number2 {
         background-image: none;
     }
+
+.logo {
+
+    width: 256px;
+    height: 59px;
+    background-image: url('/images/flappy_bird/logo.png');
+    background-size: 100% auto;
+
+    position: absolute;
+    top: 150px;
+    left: 30px;
+
+}
+
+.tap {
+    width: 105px;
+    height: 132px;
+    background-image: url('/images/flappy_bird/tap.png');
+    background-size: 100% auto;
+
+    position: absolute;
+    left: 170px;
+    top: 170px;
+}
+
+.ready {
+    width: 233px;
+    height: 59px;
+    background-image: url('/images/flappy_bird/get_ready.png');
+    background-size: 100% auto;
+
+    position: absolute;
+    left: 75px;
+    top: 60px;
+}
+
+.gameover {
+    width: 251px;
+    height: 51px;
+    background-image: url('/images/flappy_bird/game_over.png');
+    background-size: 100% auto;
+
+    position: absolute;
+    left: 67px;
+    top: 120px;
+
+    z-index: 5;   /* 这个数值要规划一下  先用5 */
+}
+
+.ok {
+    width: 107px;
+    height: 38px;
+    background-image: url('/images/flappy_bird/ok.png');
+    background-size: 100% auto;
+
+    position: absolute;
+    left: 67px;
+    top: 355px;
+
+    z-index: 5;   /* 这个数值要规划一下  先用5 */
+}
+
+.start {
+    width: 107px;
+    height: 38px;
+    background-image: url('/images/flappy_bird/start.png');
+    background-size: 100% auto;
+
+    position: absolute;
+    left: 30px;
+    top: 400px;
+}
+
+.scoreboard {
+    width: 251px;      /*这个的长宽不是按照2:1来的*/
+    height: 129px;
+    background-image: url('/images/flappy_bird/score_board.png');
+    background-size: 100% auto;
+
+    position: absolute;
+    left: 67px;
+    top: 206px;
+
+    z-index: 5; 
+
+}
+    .scoreboard .result {
+        width: 36px;
+        height: 25px;
+
+        position: absolute;
+        right: 25px;
+    }
+    .scoreboard .result.recent {
+        top: 35px;
+    }
+    .scoreboard .result.record {
+        top: 80px;
+    }
+
+        .scoreboard .result .number{
+            width: 18px;
+            height: 25px;
+
+            background-image: url('/images/flappy_bird/numbers.png');
+            background-size: auto 100%;
+
+            position: absolute;
+        }
+
+        .scoreboard .result #number1 {
+            right: 0;
+        }
+
+        .scoreboard .result #number2 {
+            background-image: none;
+        }
