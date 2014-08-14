@@ -11,7 +11,8 @@ html,body{
 
 body{
     background-color:white;
-    font:14.34px "Hiragino Sans GB",helvetica,arial,clean,sans-serif;
+    font:14.34px 'Lato',Arial,'Microsoft YaHei',sarif;
+    font-weight: 400;
     *font-size: small;
     text-align: center;
     padding-top:0;
@@ -20,7 +21,10 @@ body{
 }
 
 h1,h2,h3,h4,h5,h6{
-    font-size:100%
+    font-size:100%;
+    font-weight: 900;
+    font:Lato,'Times New Roman',Arial,'Microsoft YaHei',sarif;
+    /*text-shadow: 1px 1px #efefef, 2px 2px #b0cb2c;*/
 }
 
 h1{
@@ -32,12 +36,13 @@ p{
 }
 
 a{
-    color: #00a;
+    color: black;
+    text-decoration: none;
 }
 
 /* 鼠标停在链接上链接的颜色 */
 a:hover{
-    color: black;
+    color: red;
 }
 
 /* 访问后的链接颜色 */
@@ -68,6 +73,8 @@ ul.posts {
 
 ul.posts li {
     line-height: 1.75em;
+    border-bottom: 1px solid #a00;
+    text-indent: 9em;
 }
 
 ul.posts span {
@@ -87,7 +94,7 @@ ul.posts span {
     font-size: 110%;
     text-align: justify;
     width: 42em;
-    margin: 3em auto 2em auto;
+    margin: 7em auto 2em auto;
     line-height: 1.5em;
 }
 
@@ -124,13 +131,13 @@ ul.posts span {
     text-align: center;
     font-size: 80%;
     color: #666;
-    border-top: 4px solid #eee;
-    margin-top: 2em;
+    border-top: 4px solid #a00;
+    margin-top: 8em;
     overflow: hidden;
 }
 
 .site .footer .contact {
-    float: left
+    /*float: left;*/
     margin-right: 3em;
 }
 
@@ -159,12 +166,30 @@ ul.posts span {
 }
 
 
-.site .header .text-muted {
-    font-weight: bold;
-    color:#a00;
+
+
+/* navigation */
+.navigation {
+    width: 100%;
+    height: 4em;
+
+    border-bottom: 2px solid #a00;
+
+    line-height: 4em;
+
+    z-index: 1;
 }
 
 
+    .navigation .text-muted {
+        font-weight: bold;
+        color:#a00;
+
+        font-size: 1.5em;
+        /*font-family: 'irvin', 'Microsoft YaHei';*/
+
+        /*text-shadow:2px 2px 4px white;*/
+    }
 
 /*===============================*/
 
@@ -236,6 +261,9 @@ ul.posts span {
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+
+    margin: 75px auto;
+    /*margin-bottom: 30px;*/
 }
 
 .accordian ul {
