@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 郑渊洁是个怎样的人
+tags: [test]
 ---
 
 <h1>{{ page.title }}</h1>

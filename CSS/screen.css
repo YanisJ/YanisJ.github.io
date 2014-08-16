@@ -3,6 +3,8 @@
 *{
     margin: 0;
     padding: 0;
+
+    font-weight: bold;
 }
 
 html,body{
@@ -36,19 +38,20 @@ p{
 }
 
 a{
-    color: black;
+    color: #177ecc;
     text-decoration: none;
 }
 
 /* 鼠标停在链接上链接的颜色 */
-a:hover{
-    color: red;
+/*a:hover{
+    color: #fff;
+    background-color: #c9dbe9;
 }
-
+*/
 /* 访问后的链接颜色 */
-a:visited{
-    /*color: #a0a;*/
-}
+/*a:visited{
+    color: black;
+}*/
 
 table{
     font-size: inherit;
@@ -66,21 +69,58 @@ table{
     clear: both;
 }
 
+hr {
+    color: #a00;
+}
+
 ul.posts {
     list-style-type: none;
     margin-bottom: 2em;
+
+    /*text-align: center;*/
 }
 
 ul.posts li {
     line-height: 1.75em;
-    border-bottom: 1px solid #a00;
-    text-indent: 9em;
+    border-bottom: 2px dashed #f3f3f3;
+
+    margin-bottom: 0.75em;
+    padding-bottom: 0.75em;
 }
 
 ul.posts span {
     color: #aaa;
     font-family: Monaco, "Courier New", monospace;
-    font-size: 80%
+    font-size: 80%;
+}
+
+ul.posts li > a:hover {
+    /*text-indent: 1em;*/
+    color: #fff;
+    background-color: #177ecc;
+}
+
+li > a:visited {
+    color: black;
+}
+
+ul.posts .tags {
+    font-size: 80%;
+    margin-left: 8.4em;
+}
+
+ul.posts .tag {
+    color: #fff;
+    background-color: #a00;
+
+    padding: 0 0.5em;
+
+    cursor: pointer;
+}
+
+ul.posts .tag:hover {
+    background-color: #fff;
+    color: #a00;
 }
 
 
@@ -138,7 +178,7 @@ ul.posts span {
 
 .site .footer .contact {
     /*float: left;*/
-    margin-right: 3em;
+    /*margin-right: 3em;*/
 }
 
 
@@ -147,7 +187,7 @@ ul.posts span {
     color: #8085c1;
 }
 
-.site .footer .rss {
+/*.site .footer .rss {
     margin-top: 1.1em;
     margin-right: -.2em;
     float: right;
@@ -155,25 +195,17 @@ ul.posts span {
 
 .site .footer .rss img {
     border: 0;
-}
+}*/
+
 
 .header {
     margin-bottom: 20px;
 }
 
-.text-muted {
-
-}
-
-
-
 
 /* navigation */
 .navigation {
-    width: 100%;
-    height: 4em;
-
-    border-bottom: 2px solid #a00;
+    width: 100%;     /* 取消height，div会被自动撑起来 */
 
     line-height: 4em;
 
@@ -185,10 +217,41 @@ ul.posts span {
         font-weight: bold;
         color:#a00;
 
+        border-bottom: 6px double #a00;
         font-size: 1.5em;
         /*font-family: 'irvin', 'Microsoft YaHei';*/
 
         /*text-shadow:2px 2px 4px white;*/
+    }
+
+    .navigation .button {
+        line-height: 1em;
+        padding-left: 20em;
+
+        font-size: 1em;
+
+        margin-top: 2px;
+        
+    }
+
+    .navigation .button span {
+        margin-left: 3.3em;
+
+        padding: 2px 4px;
+
+        border-radius: 15%;
+    }
+
+    .navigation .button span a {
+        color: #a00;
+    }
+
+    .navigation .button span:hover {
+        background-color: #a00;
+    }
+
+    .navigation .button span:hover a {
+        color: #fff;
     }
 
 /*===============================*/
@@ -317,6 +380,10 @@ ul.posts span {
     font-size: 16px;
     padding: 20px;
     text-decoration: none;
+}
+
+.accordian .image_title a:hover{
+
 }
 
 /*===============================*/

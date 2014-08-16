@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 陈奕迅-你给我听好
+tags: [test, MV]
 ---
 
 <h1>{{ page.title }}</h1>

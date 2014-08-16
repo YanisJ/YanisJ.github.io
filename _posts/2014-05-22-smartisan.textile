@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Smartisan T1
+tags: [test]
 ---
 
 <h1>{{ page.title }}</h1>

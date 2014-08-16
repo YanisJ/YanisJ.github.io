@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Michael Jackson-Slave To The Rhythm
+tags: [MV]
 ---
 
 <h1>{{ page.title }}</h1>
