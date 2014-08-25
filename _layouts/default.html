@@ -70,7 +70,7 @@
         
         <!-- Tags Search -->
         <script>
-            window.onload = function() { 
+            (function() { 
                 function getParameterByName(name) {
                     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
                     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -84,7 +84,7 @@
                 } else { 
                     
                 } 
-            };
+            })();
         </script>
         <!-- Tags Search End -->
 
