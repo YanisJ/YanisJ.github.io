@@ -109,7 +109,7 @@ ul.posts .tags {
     margin-left: 8.4em;
 }
 
-ul.posts .tag {
+.tag {
     color: #fff;
     background-color: #a00;
 
@@ -118,7 +118,7 @@ ul.posts .tag {
     cursor: pointer;
 }
 
-ul.posts .tag:hover {
+.tag:hover {
     background-color: #fff;
     color: #a00;
 }
