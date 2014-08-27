@@ -3,8 +3,6 @@
 *{
     margin: 0;
     padding: 0;
-
-    font-weight: bold;
 }
 
 html,body{
@@ -31,12 +29,8 @@ h1,h2,h3,h4,h5,h6,a{
 
 
 
-.navigation {
-    font-family:'ny-irvin-display','Times New Roman',Arial,'Microsoft YaHei',sarif;
-}
 
 h1{
-    /*margin-bottom: 1em;*/
     font-size: 1.25em;
     letter-spacing: 0.1em;
 }
@@ -46,7 +40,7 @@ p{
 }
 
 a{
-    /*color: #177ecc;*/
+    color: #177ecc;
     text-decoration: none;
 }
 
@@ -217,7 +211,10 @@ ul.posts .tags {
 
     line-height: 4em;
 
-    z-index: 1;
+    /*z-index: 1;*/
+
+    font-family:'ny-irvin-display','Times New Roman',Arial,'Microsoft YaHei',sarif;
+    margin-bottom: 1em;
 }
 
 
