@@ -11,7 +11,7 @@ html,body{
 
 body{
     background-color:white;
-    font:14.34px 'Lato',Arial,'Microsoft YaHei',sarif;
+    font:14.34px 'Microsoft YaHei',sarif;
     font-weight: 400;
     *font-size: small;
     text-align: center;
@@ -20,15 +20,12 @@ body{
     overflow-x: hidden;    /*for moving clouds*/
 }
 
-h1,h2,h3,h4,h5,h6,a{
+h1,h2,h3,h4,h5,h6 {
     font-size:100%;
     font-weight: 900;
     font-family: "ny-irvin-heading";
     /*text-shadow: 1px 1px #efefef, 2px 2px #b0cb2c;*/
 }
-
-
-
 
 h1{
     font-size: 1.25em;
@@ -42,18 +39,9 @@ p{
 a{
     color: #177ecc;
     text-decoration: none;
+    font-family:'ny-irvin-display','Microsoft YaHei',sarif;
+    font-weight: 700;
 }
-
-/* 鼠标停在链接上链接的颜色 */
-/*a:hover{
-    color: #fff;
-    background-color: #c9dbe9;
-}
-*/
-/* 访问后的链接颜色 */
-/*a:visited{
-    color: black;
-}*/
 
 table{
     font-size: inherit;
@@ -78,8 +66,6 @@ hr {
 ul.posts {
     list-style-type: none;
     margin-bottom: 2em;
-
-    /*text-align: center;*/
 }
 
 ul.posts li {
@@ -140,31 +126,6 @@ ul.posts .tags {
     line-height: 1.5em;
 }
 
-.title {
-    color: #a00;
-    font-weight: bold;
-    margin-bottom: 2em;
-}
-
-.site .title a {
-    color: #a00;
-    text-decoration: none;
-}
-
-.site .title a:hover {
-    color: black;
-}
-
-.site .title a.extra {
-    color: #aaa;
-    text-decoration: none;
-    margin-left: 1em;
-}
-
-.site .title a.extra:hover {
-    color: #aaa;
-}
-
 .site .meta {
     color: #aaa;
 }
@@ -200,10 +161,6 @@ ul.posts .tags {
 }*/
 
 
-.header {
-    margin-bottom: 20px;
-}
-
 
 /* navigation */
 .navigation {
@@ -211,52 +168,46 @@ ul.posts .tags {
 
     line-height: 4em;
 
-    /*z-index: 1;*/
-
-    font-family:'ny-irvin-display','Times New Roman',Arial,'Microsoft YaHei',sarif;
+    
     margin-bottom: 1em;
 }
 
 
     .navigation .text-muted {
-        font-weight: bold;
         color:#a00;
 
         border-bottom: 6px double #a00;
         font-size: 1.5em;
-        /*font-family: 'irvin', 'Microsoft YaHei';*/
-
-        /*text-shadow:2px 2px 4px white;*/
     }
 
-    .navigation .button {
+    .button {
         line-height: 1em;
         padding-left: 20em;
 
         font-size: 1em;
 
-        margin-top: 2px;
+        margin-top: 0.1em;
         
         text-transform: uppercase;
     }
 
-    .navigation .button span {
+    .button span {
         margin-left: 3.3em;
 
-        padding: 2px 4px;
+        padding: 0.2px 0.5px;
 
         border-radius: 15%;
     }
 
-    .navigation .button span a {
+    .button span a {
         color: #a00;
     }
 
-    .navigation .button span:hover {
+    .button span:hover {
         background-color: #a00;
     }
 
-    .navigation .button span:hover a {
+    .button span:hover a {
         color: #fff;
     }
 
@@ -417,6 +368,8 @@ ul.posts .tags {
 /* Cloud */
 
 /*===============================*/
+
+
 
 #clouds {
     position: fixed; top: 0; left: 0;
@@ -989,3 +942,43 @@ ul.posts .tags {
         .scoreboard .result #number2 {
             background-image: none;
         }
+
+/*=============================*/
+
+/* response */
+
+/*=============================*/
+
+
+
+@media screen and (max-width: 43.75em) {
+    #clouds {
+        display: none;
+    }
+
+    .site {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 450px) {
+    .navigation {
+        margin-bottom: 2.5em;
+    }
+
+    ul.posts .tags {
+        font-size: 80%;
+        margin-left: 3em;
+    }
+
+    .accordian {
+        display: none;
+    }    
+
+    .button {
+        padding-left: 0;
+    }
+}
