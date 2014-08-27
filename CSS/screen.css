@@ -22,15 +22,23 @@ body{
     overflow-x: hidden;    /*for moving clouds*/
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6,a{
     font-size:100%;
     font-weight: 900;
-    font:Lato,'Times New Roman',Arial,'Microsoft YaHei',sarif;
+    font-family: "ny-irvin-heading";
     /*text-shadow: 1px 1px #efefef, 2px 2px #b0cb2c;*/
 }
 
+
+
+.navigation {
+    font-family:'ny-irvin-display','Times New Roman',Arial,'Microsoft YaHei',sarif;
+}
+
 h1{
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
+    font-size: 1.25em;
+    letter-spacing: 0.1em;
 }
 
 p{
@@ -38,7 +46,7 @@ p{
 }
 
 a{
-    color: #177ecc;
+    /*color: #177ecc;*/
     text-decoration: none;
 }
 
@@ -232,6 +240,7 @@ ul.posts .tags {
 
         margin-top: 2px;
         
+        text-transform: uppercase;
     }
 
     .navigation .button span {
@@ -308,6 +317,26 @@ ul.posts .tags {
 #related h2{
     margin-bottom: 1em;
 }
+
+/*===============================*/
+
+/* Tags */
+
+/*===============================*/
+
+.tagDiv h3 {
+    font-size: 170%;
+    color: navy;
+    
+    line-height: initial;
+    margin: 1.5em 0 1em 0;
+
+    border: 3px dashed;
+
+    text-indent: 0.5em;
+}
+
+
 
 
 
