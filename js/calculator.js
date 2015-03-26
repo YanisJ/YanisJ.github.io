@@ -48,12 +48,3 @@ for(var i=0; i<keys.length; i++){
 		e.preventDefault();
 	}
 }
-
-var url = 'http://fanyi.youdao.com/openapi.do?keyfrom=Yanisj&key=1654009734&type=data&doctype=json&version=1.1&q=permission';
-var xhr = new XMLHttpRequest();
-
-xhr.open("GET", url, true);
-xhr.onreadystatechange = function() {
-    console.log(xhr.responseText);
-};
-xhr.send();
