@@ -537,6 +537,7 @@
 	Game.prototype.getReady = function(){
 		
 		this.isReady = true;
+		this.end = false;
 
 		// 删去.down 添加.fly
 		this.bird.elm.removeClass('down').removeClass('cover_style').addClass('fly');
@@ -561,18 +562,31 @@
 
 		this.showElm('bird', 'score');
 
-		this.interval = setInterval(function(){
-			
-			self.run();
+		var run = function ( timestamp ) {
+            if ( !self.startTime ) self.startTime = timestamp;
+            
+            if ( !self.end ) {
 
-		}, 1);
+                self.pipe.animation();
+                self.bird.animation();
+                self.stage.animation();
 
+                self.hit();
+
+                self.startTime = timestamp;
+
+                self.ani = window.requestAnimationFrame(run);
+            }
+        };
+
+        window.requestAnimationFrame(run);
 	}
 	
 	
 	Game.prototype.gameover = function(){
 		
-		clearInterval(this.interval);
+		this.end = true;
+		window.cancelAnimationFrame(this.ani);
 		this.bird.dead();
 		this.showElm('bird', 'gameover', 'scoreboard', 'ok');
 		this.scoreboard.setScore(this.score.num);
