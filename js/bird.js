@@ -8,7 +8,7 @@
 
 		this.elm = obj;
 
-		this.ground = $("<div></div>");
+		this.ground = $('<div></div>');
 		this.ground.addClass('ground');
 
 		this.elm.append(this.ground);
@@ -114,6 +114,7 @@
 		bird.removeClass('fly').removeClass('up').removeClass('down').addClass('down');
 
 		var interval = setInterval(function(){
+			if(!bird.hasClass('down')) return clearInterval(interval);
 
 			v = v + 1;
 			self.birdTop = self.birdTop + v;
@@ -417,18 +418,18 @@
 		
 		var self = this;
 
-		this.stage.elm.on('mousedown', function(event) {
+		// this.stage.elm.on('mousedown', function(event) {
 
-			if(self.isReady == true){
+		// 	if(self.isReady == true){
 				
-				self.isReady = false;
-				self.begin();
+		// 		self.isReady = false;
+		// 		self.begin();
 			
-			}
+		// 	}
 		
-			self.bird.speed = -8;
+		// 	self.bird.speed = -8;
 
-		});
+		// });
 
 		
 		$(document).on('pipe_create', function(e,pipe) {
@@ -539,6 +540,19 @@
 		this.isReady = true;
 		this.end = false;
 
+		this.stage.elm.on('mousedown', function(event) {
+
+			if(self.isReady == true){
+				
+				self.isReady = false;
+				self.begin();
+			
+			}
+		
+			self.bird.speed = -8;
+
+		});
+
 		// 删去.down 添加.fly
 		this.bird.elm.removeClass('down').removeClass('cover_style').addClass('fly');
 
@@ -586,6 +600,8 @@
 	Game.prototype.gameover = function(){
 		
 		this.end = true;
+
+		this.stage.elm.off('mousedown');
 		window.cancelAnimationFrame(this.ani);
 		this.bird.dead();
 		this.showElm('bird', 'gameover', 'scoreboard', 'ok');
