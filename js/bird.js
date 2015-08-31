@@ -418,18 +418,18 @@
 		
 		var self = this;
 
-		// this.stage.elm.on('mousedown', function(event) {
+		this.stage.elm.on('mousedown', function(event) {
 
-		// 	if(self.isReady == true){
+			if(self.isReady == true){
 				
-		// 		self.isReady = false;
-		// 		self.begin();
+				self.isReady = false;
+				self.begin();
 			
-		// 	}
+			}
 		
-		// 	self.bird.speed = -8;
+			self.bird.speed = -8;
 
-		// });
+		});
 
 		
 		$(document).on('pipe_create', function(e,pipe) {
@@ -540,18 +540,18 @@
 		this.isReady = true;
 		this.end = false;
 
-		this.stage.elm.on('mousedown', function(event) {
+		// this.stage.elm.on('mousedown', function(event) {
 
-			if(self.isReady == true){
+		// 	if(self.isReady == true){
 				
-				self.isReady = false;
-				self.begin();
+		// 		self.isReady = false;
+		// 		self.begin();
 			
-			}
+		// 	}
 		
-			self.bird.speed = -8;
+		// 	self.bird.speed = -8;
 
-		});
+		// });
 
 		// 删去.down 添加.fly
 		this.bird.elm.removeClass('down').removeClass('cover_style').addClass('fly');
