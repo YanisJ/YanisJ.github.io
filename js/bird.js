@@ -601,7 +601,7 @@
 		
 		this.end = true;
 
-		this.stage.elm.off('mousedown');
+		// this.stage.elm.off('mousedown');
 		window.cancelAnimationFrame(this.ani);
 		this.bird.dead();
 		this.showElm('bird', 'gameover', 'scoreboard', 'ok');
