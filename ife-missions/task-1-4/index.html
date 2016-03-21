@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1-4</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./github.css">
+  <script src="./highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</head>
+<body>
+  <div class="main">
+    <header>
+      <button class="active">know the size</button>
+      <button>don't know the size</button>
+      <button>use flex</button>
+    </header>
+    <div class="center know-size">
+      <div class="left-conner"></div>
+      <div class="right-conner"></div>
+    </div>
+  </div>
+  <aside>
+    <div id="css">
+
+      <pre id="size"><code>
+        .know-size {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          margin-left: -200px;
+          margin-top: -100px;
+        }
+      </code></pre>
+
+      <pre id="without-size"><code>
+        .dont-know-size {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          transform: translate(-50%, -50%);
+        }
+      </code></pre>
+
+      <pre id="flex"><code>
+        .flex-parent {
+          display: flex;
+        }
+
+        .with-flex {
+          margin: auto;
+          position: relative;
+        }
+      </code></pre>
+    </div>
+  </aside>
+  <script src="./control.js"></script>
+</body>
+</html>
